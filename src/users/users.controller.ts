@@ -5,7 +5,7 @@ import { User } from './user.schema';
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly userService: UsersService) { }
+  constructor(private readonly userService: UsersService) {}
 
   @Post()
   create(@Body() dto: CreateUserDto): Promise<User> {

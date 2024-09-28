@@ -15,7 +15,7 @@ import { User, UserSchema } from './user.schema';
           urls: ['amqp://localhost:5672'],
           queue: 'users_queue',
           queueOptions: {
-            durable: false
+            durable: false,
           },
         },
       },
@@ -23,11 +23,11 @@ import { User, UserSchema } from './user.schema';
     MongooseModule.forFeature([
       {
         name: User.name,
-        schema: UserSchema
-      }
-    ])
+        schema: UserSchema,
+      },
+    ]),
   ],
   controllers: [UsersController],
   providers: [UsersService],
 })
-export class UsersModule { }
+export class UsersModule {}

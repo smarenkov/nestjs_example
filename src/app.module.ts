@@ -5,9 +5,9 @@ import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost/nestjs_example'),
-    UsersModule
+    UsersModule,
   ],
   controllers: [],
   providers: [],
 })
-export class AppModule { }
+export class AppModule {}

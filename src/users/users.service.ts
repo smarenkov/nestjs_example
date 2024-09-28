@@ -8,7 +8,7 @@ import { User } from './user.schema';
 @Injectable()
 export class UsersService {
   constructor(
-    @Inject("USERS_SERVICE") private rabbitClient: ClientProxy,
+    @Inject('USERS_SERVICE') private rabbitClient: ClientProxy,
     @InjectModel(User.name) private userModel: Model<User>,
   ) {}
 
@@ -16,7 +16,7 @@ export class UsersService {
     const user = new this.userModel(dto);
     const newUser = await user.save();
 
-    this.rabbitClient.emit('user_created', newUser); // Assuming the event configuration is correct
+    this.rabbitClient.emit('user_created', newUser);
 
     return newUser;
   }
