@@ -1,0 +1,15 @@
+services:
+  app:
+    container_name: nestjs-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3005'
+    environment:
+      NODE_ENV: dev
+      MONGODB_URI: mongodb://192.168.1.33:27017/nestjs_example
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    network_mode: "host"
