@@ -4,8 +4,8 @@ import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/nestjs_example'),
-    UsersModule,
+    MongooseModule.forRoot(process.env.MONGODB_URI),
+    UsersModule,  
   ],
   controllers: [],
   providers: [],
