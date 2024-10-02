@@ -34,6 +34,8 @@ net:
   bindIp: 0.0.0.0
 ```
 
+3. Restart MongoDB
+
 ### Running Docker Compose with Local RabbitMQ
 
 If you want to run Docker Compose and use your local RabbitMQ instance, you'll need to modify the RabbitMQ configuration to specify the IP address.
@@ -45,3 +47,5 @@ If you want to run Docker Compose and use your local RabbitMQ instance, you'll n
 ```
 listeners.tcp.default = [your ip address]:5672
 ```
+
+3. Restart RabbitMQ
